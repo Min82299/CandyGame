@@ -176,6 +176,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14b0ce20af0850f4b847da06ef857d02, type: 3}
+--- !u!4 &87742257 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7297427961543556016, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+  m_PrefabInstance: {fileID: 523908685922361569}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &122788339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -584,6 +589,9 @@ MonoBehaviour:
   - {fileID: 9058022648255641411, guid: 14b0ce20af0850f4b847da06ef857d02, type: 3}
   - {fileID: 9058022648255641411, guid: c6df06ceec34c3a42a71c00f30899a34, type: 3}
   - {fileID: 9058022648255641411, guid: 92df20d4f3b1ac54497ef046e6037b6a, type: 3}
+  - {fileID: 9058022648255641411, guid: 92df20d4f3b1ac54497ef046e6037b6a, type: 3}
+  - {fileID: 9058022648255641411, guid: 92df20d4f3b1ac54497ef046e6037b6a, type: 3}
+  - {fileID: 783944432390815000, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
   candyParentTransform: {fileID: 0}
   shotForce: 560
   shotTorque: 30
@@ -1317,6 +1325,7 @@ Transform:
   - {fileID: 1994693296}
   - {fileID: 495550601}
   - {fileID: 984470008}
+  - {fileID: 87742257}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &795857742
@@ -3706,6 +3715,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1839924198}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &523908685922361569
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 713665772}
+    m_Modifications:
+    - target: {fileID: 783944432390815000, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+      propertyPath: m_Name
+      value: GoldCandy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982683969377589858, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1896235254}
+    - target: {fileID: 7297427961543556016, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.379142
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297427961543556016, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.423351
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297427961543556016, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 17.348452
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297427961543556016, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297427961543556016, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297427961543556016, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297427961543556016, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297427961543556016, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297427961543556016, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7297427961543556016, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 234482840b0f7f149b3331a3270e90c1, type: 3}
 --- !u!1001 &5017562968769167616
 PrefabInstance:
   m_ObjectHideFlags: 0
