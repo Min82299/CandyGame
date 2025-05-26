@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Diagnostics.Tracing;
+using System;
 
 public class CandyMananger : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class CandyMananger : MonoBehaviour
     public TextMeshProUGUI countDown;
     const int RecoveryTime = 10;    //Time de tang them keo
     int counter;    // Dong ho dem nguoc
+
+    public int totalScore = 0;
+    public TextMeshProUGUI totalScoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -61,5 +65,19 @@ public class CandyMananger : MonoBehaviour
     public int GetCandyAmount()
     {
         return candy;
+    }
+
+    public void AddScore(int amount)
+    {
+        totalScore += amount;
+        UpdateScoreUI();
+    }
+
+    private void UpdateScoreUI()
+    {
+        if (totalScoreText != null)
+        {
+            totalScoreText.SetText("Score: " + totalScore);
+        }
     }
 }

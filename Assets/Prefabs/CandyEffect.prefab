@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5225981646391276304}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.45, y: -8.86, z: -6.99}
+  m_LocalPosition: {x: 0.45, y: -8.86, z: -7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -666,7 +666,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 12
+    angle: 20.36856
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -752,7 +752,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 1.5195885
       mode: 0
       spread: 0
       speed:
@@ -4854,8 +4854,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 2.8138928
+  MaxDistance: 135.97644
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

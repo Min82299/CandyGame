@@ -1,6 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+
 
 public class CandyDestroyer : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class CandyDestroyer : MonoBehaviour
     public int reward;
     public GameObject effectPrefab;
     public Vector3 effectRotation;
+    public GameObject floatingScorePrefab;
+    public Transform uiCanvasTransform;
 
 
     // Start is called before the first frame update
@@ -24,19 +28,30 @@ public class CandyDestroyer : MonoBehaviour
     //Neu hung trung keo roi thi xoa keo
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Candy")
+        if (other.gameObject.tag == "Candy" || other.gameObject.tag == "GoldCandy")
         {
             Destroy(other.gameObject);
 
             // Them keo vao neu keo roi
             manager.AddCandy(reward);
+            manager.AddScore(reward);
+            if (floatingScorePrefab != null && uiCanvasTransform != null)
+            {
+                GameObject score = Instantiate(floatingScorePrefab, uiCanvasTransform);
+                score.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+                score.GetComponent<FloatingScoreEffect>().SetText("+" + reward.ToString());
+            }
+
+
             manager.DisplayCandyAmount();
-            if (effectPrefab != null)
+            /*if (effectPrefab != null)
             {
                 Instantiate(effectPrefab,   // copy
                     other.transform.position,   // dat vi tri
                     Quaternion.Euler(effectRotation));      //dat toc do quay
-            }
+            }*/
         }
     }
+
+
 }

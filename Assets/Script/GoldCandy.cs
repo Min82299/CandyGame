@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class GoldCandy : MonoBehaviour
 {
-    public int bonusPoints = 5;
+    public int bonusCandy = 5;
     public CandyMananger manager;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            manager.AddCandy(bonusPoints);
+            manager.AddCandy(bonusCandy);
+            manager.AddScore(bonusCandy);
             manager.DisplayCandyAmount();
             Destroy(gameObject);
         }

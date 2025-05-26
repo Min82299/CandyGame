@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +11,8 @@ public class Shooter : MonoBehaviour
     public float baseWidth;
     public CandyMananger manager;
     AudioSource shotSound;
+
+    public GameObject goldEffectPrefab;
 
     private void Start()
     {
@@ -28,21 +30,34 @@ public class Shooter : MonoBehaviour
     }
     void Shot()
     {
-        // Neu so luong keo dc ban = 0 thi khong duoc ban nua
         if (manager.GetCandyAmount() <= 0)
         {
             return;
         }
-        // Ban keo sau moi lan click chuot
-        GameObject candy = Instantiate(SelectCandy(), GetInstantiatePosition(),Quaternion.identity);// Copy keo
+
+        GameObject selected = SelectCandy();
+        GameObject candy = Instantiate(selected, GetInstantiatePosition(), Quaternion.identity);
         Rigidbody rb = candy.GetComponent<Rigidbody>();
-        rb.AddForce(transform.forward * shotForce); //Them luc day huong ve phia trc
-        rb.AddTorque(new Vector3(0,shotTorque,0));  //‚Ë‚¶‚ê
-        // Xoa keo sau khi roi
+        rb.AddForce(transform.forward * shotForce);
+        rb.AddTorque(new Vector3(0, shotTorque, 0));
+
+        if (selected.tag == "GoldCandy")
+        {
+            manager.AddCandy(5);
+            manager.DisplayCandyAmount();
+
+            if (goldEffectPrefab != null)
+            {
+                /*Debug.Log("Gold effect position: " + candy.transform.position);*/
+                Instantiate(goldEffectPrefab, candy.transform.position, Quaternion.identity);
+            }
+        }
+
         manager.ConsumeCandy();
         manager.DisplayCandyAmount();
-        shotSound.Play(); // Bat am thanh ban
+        shotSound.Play();
     }
+
 
     // Chon ngau nhien keo de ban ra
     GameObject SelectCandy()

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4982683969377589858}
   m_Layer: 0
   m_Name: GoldCandy
-  m_TagString: Candy
+  m_TagString: GoldCandy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.379142, y: -5.423351, z: 17.348452}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -148,5 +148,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e02343f75fa8094f84a271fe8c57777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusPoints: 5
+  bonusCandy: 5
   manager: {fileID: 0}
