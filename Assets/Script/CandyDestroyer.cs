@@ -35,11 +35,22 @@ public class CandyDestroyer : MonoBehaviour
             // Them keo vao neu keo roi
             manager.AddCandy(reward);
             manager.AddScore(reward);
-            if (floatingScorePrefab != null && uiCanvasTransform != null)
+            /*if (floatingScorePrefab != null && uiCanvasTransform != null)
             {
                 GameObject score = Instantiate(floatingScorePrefab, uiCanvasTransform);
                 score.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
                 score.GetComponent<FloatingScoreEffect>().SetText("+" + reward.ToString());
+            }*/
+
+            if (floatingScorePrefab != null)
+            {
+                GameObject scoreFX = Instantiate(floatingScorePrefab,
+                    Camera.main.WorldToScreenPoint(other.transform.position),
+                    Quaternion.identity,
+                    GameObject.Find("Canvas").transform); // parent là Canvas
+
+                TextMeshProUGUI text = scoreFX.GetComponent<TextMeshProUGUI>();
+                text.SetText("+" + reward);
             }
 
 
